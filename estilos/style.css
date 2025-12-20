@@ -2,20 +2,20 @@
 
 /*
     Paletas de cores
-    Verde: #49a09
-    lilás: #5f2c82
+    Verde: #49a09d
+    Lilás: #5f2c82
 */
 
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    background-color:  #5f2c82;
+html, body {
+    background-color: #5f2c82;
     height: 100vh;
     width: 100vw;
 }
@@ -30,22 +30,22 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-   
-    overflow: hidden;
 
+    overflow: hidden;
     background-color: white;
     width: 250px;
     height: 515px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-     transform: translate(-50%, -50%);
-    transition: width .3s, height .3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
     transition-timing-function: ease;
 }
 
 section#login > div#imagem {
     display: block;
-    background:  #5f2c82 url(../imagens/metal.jpg) no-repeat;
+    background: #5f2c82 url(../imagens/metal.jpg) no-repeat;
     background-size: cover;
     background-position: left bottom;
     height: 200px;
@@ -56,7 +56,8 @@ section#login > div#formulario {
     padding: 10px;
 }
 
-di#formulario > h1 {
+/* ERRO CORRIGIDO AQUI */
+div#formulario > h1 {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -72,7 +73,7 @@ form > div.campo {
     width: 100%;
     height: 40px;
     border-radius: 8px;
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 div.campo > label {
@@ -81,7 +82,7 @@ div.campo > label {
 
 div.campo > i {
     color: white;
-    background-color: black;
+    background-color: #5f2c82;
     font-size: 2em;
     width: 40px;
     padding: 5px;
@@ -92,16 +93,16 @@ div.campo > input {
     font-size: 1em;
     width: calc(100% - 44px);
     height: 100%;
-    
     border: 0px;
     border-radius: 8px;
     padding: 4px;
-    transform: translateY(-10px);
+   
 }
 
-div.campo > input:focus-within {
+/* FOCO CORRIGIDO */
+div.campo > input:focus {
     background-color: white;
-    border: none;
+    outline: none;
 }
 
 form > input[type=submit] {
@@ -142,4 +143,3 @@ form > a.botao:hover {
 form > a.botao > i {
     font-size: 0.8em;
 }
-
